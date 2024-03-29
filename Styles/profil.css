@@ -1,0 +1,453 @@
+* {
+    min-width: 0;
+    font: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, svg,video {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100dvh;
+}
+
+/*-------------------------------  Header  -------------------*/
+
+.header {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 1100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container .logo {
+    width: 85px;
+    height: 85px;
+}
+
+.seacrh-header {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seacrh-header .search-input {
+    width: 500px;
+    padding: 12px 10px;
+    background-color: #F9F5FF;
+    border-right: none;
+    font-family:"Inter", sans-serif ;
+    border: none;
+    border-radius: 15px;
+}
+
+.seacrh-header .search-input:focus {
+    outline: none;
+}
+
+.btn-header {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-header .link-profil {
+    width: 70px;
+    height: 70px;
+}
+
+.btn-header .btn-add {
+    display: flex;
+    flex-direction: row;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 16px;
+    border: solid 1px #6C27CD;
+    background-color: white;
+    color: #6C27CD;
+}
+
+.btn-header .btn-add img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.btn-header .btn-connexion {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 16px;
+    border: none;
+    background-color: #6C27CD;
+    color: white;
+}
+
+.btn-header a {
+    text-decoration: none;
+}
+
+/*----------------------- Section 1 -----------------------*/
+
+.section-1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F9F5FF;
+}
+
+.section-1-container {
+    display: flex;
+    max-width: 100%;
+    width: 1100px;
+    flex-direction: row;
+}
+
+.section-1-left {
+    max-width: 700px;
+    width: 390px;
+    height: 100%;
+    margin-top: 30px;
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+}
+
+.section-1-left .section-1-left-container {
+    max-width: 600px;
+    width: 290px;
+    background-color: white;
+    padding: 13px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 13px rgba(189, 187, 187, 0.3);
+}
+
+/*----------------------- section 1  Profile --------------------*/
+
+.section-1-left .section-1-left-container .left-container-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.section-1-left .section-1-left-container .left-container-top img {
+    width: 70px;
+    height: 70px;
+}
+
+.section-1-left .section-1-left-container .left-container-top p {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.section-1-left .section-1-left-container .left-container-top span {
+    font-size: 15;
+    color: #777777;
+}
+
+.section-1-left .section-1-left-container .left-container-top .profil-info {
+    margin-left: 15px;
+}
+
+.left-container-bottom {
+    margin-top: 20px;
+}
+
+.left-container-bottom .link-nav a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.left-container-bottom .link-nav a img {
+    width: 36px;
+    height: 36px;
+    margin-right: 25px;
+}
+
+.left-container-bottom .link-nav {
+    margin-bottom: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Position relative pour le pseudo-élément */
+    transition: color 0.3s;
+}
+
+.left-container-bottom .link-nav a:hover,
+.left-container-bottom .link-nav a:focus {
+    color: var(--title-color);
+}
+
+.left-container-bottom .link-nav a:focus::after {
+    transform: scaleX(1);
+}
+
+.left-container-bottom .link-nav a::after {
+    content: '';
+    position: absolute; 
+    left: 0; 
+    bottom: -7px; 
+    width: 100%; 
+    height: 2px; 
+    background-color:#6C27CD;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.left-container-end .btn-poster {
+    display: flex;
+    flex-direction: row;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 22px;
+    border: none;
+    background-color:#6C27CD;
+    color: white;
+    width: 210px;
+    justify-content: center;
+}
+
+.left-container-end .btn-poster img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/*---------------------- section 1 right -----------------*/
+
+.section-1-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-1-right-container {
+    max-width: 800px;
+    width: 770px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    margin-top: 120px;
+    box-shadow: 0px 5px 13px rgba(146, 146, 146, 0.3);
+}
+
+.container-right-top {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.container-right-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-top .profile-top-info {
+    width: 515px;
+}
+
+.profile-top .profil-img {
+    width: 150px;
+    height: 150px;
+}
+
+.profile-top-info {
+    font-family: "Inter", sans-serif;
+    margin-left: 15px;
+}
+
+.profile-top-info h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #6C27CD;
+}
+
+.profile-top-info p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.profil-btn {
+    display: flex;
+    flex-direction: row;
+    background-color: #6C27CD;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.profil-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.profile-bottom .link-span {
+    font-family: "Inter", sans-serif;
+}
+
+.profile-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    justify-content: space-between;
+}
+
+.link-span .span-actif {
+    color: #6C27CD;
+    border-bottom: #6C27CD 1px solid;
+}
+
+.link-span span {
+    font-size: 20px;
+}
+
+.plus img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.plus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info-cacher .play {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.person .pro {
+    width: 50px;
+    height: 50px;
+    border: #6C27CD solid 3px;
+    border-radius: 40px;
+}
+
+.person {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.person span {
+    font-family: "Inter", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-look {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.look-1 {
+    position: relative;
+    display: inline-block;
+}
+
+.look-1 .info-cacher {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.look-1:hover .info-cacher {
+    opacity: 1;
+}
+
+.view {
+    width: 30px;
+    height: 30px;
+}
+
+.vdo {
+    width: 234px;
+}
+
+.loader {
+    width: 38px;
+    height: 38px;
+    border: 5px solid #83868a;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
